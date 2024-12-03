@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Bridge: Baguio Public Cemetery</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <nav>
+    <div class="logo">Bridge</div>
+    <ul class="menu admin-menu">
+      <li><a href="/index.html">Back to Home</a></li>
+      <li><a href="/index.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="dashboard">
+    <h2>Manage Graves</h2>
+    
+    <!-- Add New Grave Form -->
+    <div class="dashboard-section">
+      <h3>Add New Grave</h3>
+      <form id="addGraveForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="latitude">Latitude</label>
+          <input type="number" id="latitude" step="any" required>
+        </div>
+        <div class="form-group">
+          <label for="longitude">Longitude</label>
+          <input type="number" id="longitude" step="any" required>
+        </div>
+        <div class="form-group">
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" required>
+        </div>
+        <div class="form-group">
+          <label for="deathDate">Date of Death</label>
+          <input type="date" id="deathDate" required>
+        </div>
+        <button type="submit">Add Grave</button>
+      </form>
+    </div>
+
+    <!-- Graves List -->
+    <div class="dashboard-section">
+      <h3>Existing Graves</h3>
+      <div id="gravesList">
+        <!-- Graves will be listed here dynamically -->
+      </div>
+    </div>
+
+    <!-- Map Preview Section -->
+    <div class="dashboard-section">
+      <h3>Map Preview</h3>
+      <div id="map" style="height: 400px; margin-top: 20px;"></div>
+    </div>
+  </div>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html> 

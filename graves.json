@@ -1,0 +1,12 @@
+{
+  "graves": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "latitude": 16.412250,
+      "longitude": 120.574861,
+      "birthday": "2002-01-01",
+      "dateOfDeath": "2024-12-01"
+    }
+  ]
+} 

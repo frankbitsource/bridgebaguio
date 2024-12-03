@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridge: Baguio Public Cemetery</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script defer src="/js/script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+</head>
+<body>
+  <nav>
+    <div class="logo">Bridge</div>
+    <ul class="menu" id="menu">
+      <li><a href="#search">Search for a Grave</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="/admin.html">Admin</a></li>
+    </ul>
+    <div class="burger-menu" id="burgerMenu">
+      <div></div><div></div><div></div>
+    </div>
+  </nav>
+
+  <header class="landing">
+    <h1>Bridge: Baguio Public Cemetery</h1>
+    <p>Your trusted partner in finding loved ones</p>
+    <a href="#search" class="btn">Search Now</a>
+  </header>
+
+  <section id="search">
+    <h2>Search for a Grave</h2>
+    <p>Use the search tool below to locate graves within the Baguio Public Cemetery.</p>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Enter name..." aria-label="Search for a grave">
+      <button onclick="searchGrave()">Search</button>
+    </div>
+    
+    <!-- Map container -->
+    <div id="map"></div>
+    
+    <!-- Grave information container -->
+    <div id="graveInfo" class="grave-info">
+      <!-- Information will be displayed here -->
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Bridge: Baguio Public Cemetery is dedicated to simplifying the process of finding graves. Our platform ensures that visitors can locate their loved ones easily and respectfully.</p>
+  </section>
+
+  <footer>
+    <p>© 2024 Bridge: Baguio Public Cemetery. All rights reserved.</p>
+  </footer>
+</body>
+</html>
