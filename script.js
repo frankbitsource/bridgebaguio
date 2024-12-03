@@ -1,7 +1,7 @@
-document.querySelectorAll('nav a').forEach(link => {
+document.querySelectorAll('nav a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
-    const targetId = e.target.getAttribute('href').slice(1);
+    const targetId = link.getAttribute('href').slice(1);
     document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
   });
 });
